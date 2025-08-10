@@ -1,0 +1,41 @@
+h1{
+    color: #333;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer {
+    width: 100%;
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+.social-links{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#copyright {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}   
+
+#policy {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+#contact {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}

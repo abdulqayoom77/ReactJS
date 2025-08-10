@@ -1,0 +1,15 @@
+h1{
+    color: #333;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 20px;
+}
+#hero {
+    background-color: #f0f0f0;
+    padding: 50px 20px;
+    text-align: center;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
