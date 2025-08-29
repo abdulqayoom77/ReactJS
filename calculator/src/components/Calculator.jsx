@@ -1,12 +1,10 @@
-import React from "react";
-import Input from "./Input";
 import { Buttons } from "./Buttons";
 
 export const Calculator = ({ calculatorButtons }) => {
-
   return (
     <div className="calculator">
-      <Input />
+      <input type="number" placeholder="Enter Value to calculate" id="input" />
+
       <Buttons calculatorButtons={calculatorButtons} />
     </div>
   );
