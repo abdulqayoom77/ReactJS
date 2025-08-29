@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import NavBar from './components/NavBar'
 
 const App = () => {
 
@@ -8,6 +9,9 @@ const App = () => {
   const [result, setResult] = useState(null)
 
   return (
+
+    <>
+    <NavBar />
     <div className='flex flex-col h-full w-full gap-5 justify-center items-center'>
       <input type="number" name="" id="" className='border-1 border-gray-900 rounded-md p-2' placeholder='Enter a Number' onChange={(e) => setNum1(Number(e.target.value))}/>
       <input type="number" name="" id="" className='border-1 border-gray-900 rounded-md p-2' placeholder='Enter a Number' onChange={(e) => setNum2(Number(e.target.value))}/>
@@ -16,6 +20,7 @@ const App = () => {
       <button className='cursor-pointer bg-gray-900 hover:bg-gray-800 text-white w-auto px-4 py-2 rounded-md' onClick={() => setResult(num1*num2)}>Multiply</button>
       <h1 className='text-2xl font-semibold'>Result: {result ? result : 'No Result Yet'}</h1>
     </div>
+    </>
   )
 }
 
