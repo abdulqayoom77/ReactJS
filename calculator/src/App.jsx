@@ -1,5 +1,9 @@
-import React from "react";
-import { Calculator } from "./components/Calculator";
+import Heading from "./components/Heading";
+import Conatiner from "./components/Conatiner";
+import Para from "./components/Para";
+import Input from "./components/Input";
+import { Buttons } from "./components/Buttons";
+import { useState } from "react";
 
 const App = () => {
   const calculatorButtons = [
@@ -20,16 +24,25 @@ const App = () => {
     "=",
     "C",
   ];
+  const [inpValue, setInpValue] = useState("");
 
+  const handleButtonClick = (value) => {
+    setInpValue(value);
+  };
 
   return (
-    <>
-
-      <h1>Calculator</h1>
-      <p>Welcome to the Calculator App!</p>
-      <p>Use the buttons below to perform calculations.</p>
-      <Calculator calculatorButtons={calculatorButtons} />  
-    </>
+    <Conatiner>
+      <Conatiner>
+        <Heading h1={"Calculator"} />
+        <Para p={"Welcome to the Calculator App!"} />
+        <Para p={"Use the buttons below to perform calculations."} />
+      </Conatiner>
+      <Input value={inpValue}></Input>
+      <Buttons
+        calculatorButtons={calculatorButtons}
+        handleButtonClick={handleButtonClick}
+      ></Buttons>
+    </Conatiner>
   );
 };
 
