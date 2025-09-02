@@ -17,17 +17,34 @@ const App = () => {
     8,
     9,
     0,
+    '.',
     "+",
     "-",
     "*",
     "/",
     "=",
     "C",
+    "C-",
   ];
   const [inpValue, setInpValue] = useState("");
 
   const handleButtonClick = (value) => {
-    setInpValue(value);
+    if (value === "=") {
+      setInpValue(eval(inpValue).toString());
+      return; // ⬅️ stop further execution
+    }
+
+    if (value === "C") {
+      setInpValue("");
+      return; // ⬅️ stop further execution
+    }
+    if (value === "C-") {
+      setInpValue((prev) => prev.slice(0, -1));
+      return; // ⬅️ stop further execution
+    }
+
+    // only append numbers and operators
+    setInpValue((prev) => prev.toString() + value);
   };
 
   return (
