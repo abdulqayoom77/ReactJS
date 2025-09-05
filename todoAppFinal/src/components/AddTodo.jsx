@@ -11,7 +11,6 @@ const handleTodoName = (event) => {
 const handleTodoDate = (event) => {
   setTodoDate(event.target.value)
 }
-console.log("object");
 
 const handleAddButtonClicked = (event) => {
   if(todoName !== "" && todoDate !== ""){
