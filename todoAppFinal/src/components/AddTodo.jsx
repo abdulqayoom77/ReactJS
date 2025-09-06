@@ -22,6 +22,7 @@ const handleAddButtonClicked = (event) => {
     alert("Please enter something")
   }
 }
+console.log("object");
 
   return (
     <form  className='flex justify-center my-16 gap-10 items-center' onSubmit={handleAddButtonClicked} >
