@@ -11,8 +11,7 @@ const App = () => {
     // if(nameRef.current.value){
     //   ageRef.current.focus();
     // }
-    console.log(nameRef.current.value, emailRef.current.value, ageRef.current.value);
-  }
+   }
 
   return (
     <form onSubmit={handleSubmit}>
