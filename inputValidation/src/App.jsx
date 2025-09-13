@@ -1,27 +1,34 @@
-import React from 'react'
-import { useRef } from 'react'
+import React, { useState } from "react";
+import { useRef } from "react";
 
 const App = () => {
-  const inputRef = useRef(null)
-  const errorRef = useRef(null)
+  const inputRef = useRef(null);
+  const [error, setError] = useState(false);
 
-  const handleValidation = () => {
+  const handleValidation = (e) => {
+    e.preventDefault();
     const inputValue = inputRef.current.value;
-    if(inputValue.trim() === ""){
-      errorRef.current.style.display = 'block'
-    }else{
-      errorRef.current.style.display = ''
+    if (inputValue.trim() === "") {
+      setError(true);
+    } else {
+      setError(false);
     }
-  }
-  console.log("object");
+  };
 
   return (
     <div>
       <h1>Input Validation (error message)</h1>
-      <input ref={inputRef} type="text" placeholder='Type Something' />
-      <div ref={errorRef} style={{color:'red', display: 'none'}} >Please Enter a Valid Input</div>
+      <form onSubmit={handleValidation}>
+        <input ref={inputRef} type="text" placeholder="Type Something" />
+        {error && (
+          <div style={{ color: "red"}}>
+            Please Enter a Valid Input
+          </div>
+        )}
+        <button type="submit">Submit</button>
+      </form>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
