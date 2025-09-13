@@ -5,7 +5,6 @@ const App = () => {
   const [darkMode, setDarkMode] = useState(false);
   const toggleMode = () => {
     setDarkMode(!darkMode);
-    console.log(darkMode ? "Light" : "Dark");
   };
   return (
     <div
