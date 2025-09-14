@@ -69,7 +69,7 @@ const App = () => {
     return () => {
       console.log('removed sideeffect' , contentType);
     }
-  }, [contentType]);
+  }, []);
 
   return (
     <div className="p-20 flex justify-center flex-col items-center">
