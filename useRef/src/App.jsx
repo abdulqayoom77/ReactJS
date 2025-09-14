@@ -8,8 +8,10 @@ const App = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log("object");
     // if(nameRef.current.value){
     //   ageRef.current.focus();
+    
     // }
    }
 
