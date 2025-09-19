@@ -3,6 +3,7 @@ import { SettingContext } from "../context/SettingContext";
 
 const Content = () => {
   const { settings } = useContext(SettingContext);
+  console.log("object");
 
   return (
     <p className="p-4" style={{ fontSize: settings.fontSize }}>
