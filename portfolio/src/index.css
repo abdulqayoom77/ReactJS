@@ -1,6 +1,5 @@
 @import "tailwindcss";
 * {
-  background-color: black;
   overflow-x: hidden;
   box-sizing: border-box;
   user-select: none;
