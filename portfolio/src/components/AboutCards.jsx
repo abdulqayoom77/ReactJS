@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FaCode, FaRegLightbulb, FaUsers } from "react-icons/fa";
 import { GiCoffeeCup } from "react-icons/gi";
+import { ThemeContext } from "../context/theme-context";
 
 const AboutCards = () => {
+
+  const [theme] = useContext(ThemeContext);
+
+const isDark = theme === "dark";
+
+// const paraTextStyling = isDark ? "text-[#99A1AF]" : "text-[#4B5563]";
+
+
+
   const aboutCards = [
     {
       icon: <FaCode />,

@@ -1,8 +1,15 @@
+import { useContext } from "react";
 import AboutCards from "../components/AboutCards";
 import SecHeading from "../components/SecHeading";
 import SecTagLine from "../components/SecTagLine";
+import { ThemeContext } from "../context/theme-context";
 
 const About = () => {
+
+  const [theme] = useContext(ThemeContext);
+
+const isDark = theme === "dark";
+
   return (
     <div
       className="h-auto w-[100vw] !bg-[#020202] flex flex-col justify-center items-center gap-5"
