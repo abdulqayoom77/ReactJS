@@ -6,7 +6,7 @@ import { ThemeContext } from "../context/theme-context";
 
 const About = () => {
 
-  const [theme] = useContext(ThemeContext);
+  const {theme} = useContext(ThemeContext);
 
 const isDark = theme === "dark";
 
