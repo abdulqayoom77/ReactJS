@@ -4,6 +4,8 @@ import { NavLink, Outlet } from "react-router-dom";
 const About = () => {
   const actived = ({ isActive }) =>
     isActive ? "text-red-500" : "hover:text-gray-700";
+  console.log(actived);
+  
 
   return (
     <div>
