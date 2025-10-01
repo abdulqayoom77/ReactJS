@@ -1,9 +1,7 @@
 import React, { useContext } from "react";
-import { FaCode, FaRegLightbulb, FaUsers } from "react-icons/fa";
-import { GiCoffeeCup } from "react-icons/gi";
 import { ThemeContext } from "../context/theme-context";
 
-const AboutCards = () => {
+const Cards = ({cardsData}) => {
   const { theme } = useContext(ThemeContext);
 
   const isDark = theme === "dark";
@@ -16,36 +14,10 @@ const AboutCards = () => {
   const titleStyling = isDark ? "text-white" : "text-gray-900";
   const descriptionStyling = isDark ? "text-[#99A1AF]" : "text-[#4B5563]";
 
-  const aboutCards = [
-    {
-      icon: <FaCode />,
-      num: "3+",
-      title: "Years of Experience",
-      description: "Building web applications",
-    },
-    {
-      icon: <GiCoffeeCup />,
-      num: "50+",
-      title: "Projects Completed",
-      description: "From concept to deployment",
-    },
-    {
-      icon: <FaRegLightbulb />,
-      num: "20+",
-      title: "Technologies",
-      description: "Modern tech stack",
-    },
-    {
-      icon: <FaUsers />,
-      num: "10+",
-      title: "Happy Clients",
-      description: "Satisfied customers",
-    },
-  ];
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-6xl px-4 mb-20">
-      {aboutCards.map((card, index) => (
+    <div className="grid mt-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-6xl px-4 mb-20">
+      {cardsData?.map((card, index) => (
         <div
           key={index}
           className={`${cardBgStyling} p-6 rounded-lg shadow-lg flex flex-col items-center text-center ${cardHoverStyling} transition`}
@@ -64,4 +36,4 @@ const AboutCards = () => {
   );
 };
 
-export default AboutCards;
+export default Cards;

@@ -1,11 +1,40 @@
 import { useContext } from "react";
-import AboutCards from "../components/AboutCards";
 import SecHeading from "../components/SecHeading";
 import SecTagLine from "../components/SecTagLine";
+import { FaCode, FaRegLightbulb, FaUsers } from "react-icons/fa";
+import { GiCoffeeCup } from "react-icons/gi";
 import { ThemeContext } from "../context/theme-context";
+import Cards from "../components/Cards";
 
 const About = () => {
   const { theme } = useContext(ThemeContext);
+  
+  const aboutCards = [
+    {
+      icon: <FaCode />,
+      num: "3+",
+      title: "Years of Experience",
+      description: "Building web applications",
+    },
+    {
+      icon: <GiCoffeeCup />,
+      num: "50+",
+      title: "Projects Completed",
+      description: "From concept to deployment",
+    },
+    {
+      icon: <FaRegLightbulb />,
+      num: "20+",
+      title: "Technologies",
+      description: "Modern tech stack",
+    },
+    {
+      icon: <FaUsers />,
+      num: "10+",
+      title: "Happy Clients",
+      description: "Satisfied customers",
+    },
+  ];
 
   const isDark = theme === "dark";
   const backGroundAbout = isDark
@@ -75,7 +104,7 @@ const About = () => {
         </div>
       </div>
 
-      <AboutCards />
+      <Cards cardsData={aboutCards} />
     </div>
   );
 };
